@@ -1,6 +1,4 @@
-# Cute Love Calculator
-
-![Love Calculator](💖)
+# Cute Love Calculator(💖)
 
 ## About
 
