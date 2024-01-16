@@ -1,1 +1,0 @@
-# Cute_Love_Calculator
