@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Love Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="heading">
+        <h1>Love ♥ Calculator</h1>
+        <h4>Get Your Own Love Result Instantly*</h4>
+      </div>
+
+      <form id="contactForm">
+        <div class="maincontent">
+          <div>
+            <label for="yourname">*Your Name</label><br />
+            <input
+              type="text"
+              id="yourname"
+              placeholder="Enter Your Name"
+              spellcheck="false"
+              maxlength="30"
+              required
+            />
+          </div>
+          <div>
+            <label for="theirname">*His/Her Name</label><br />
+            <input
+              type="text"
+              id="theirname"
+              placeholder="Enter His/Her Name"
+              spellcheck="false"
+              maxlength="30"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit">❤ CALCULATE ❤</button>
+      </form>
+      <div class="result">
+        <h2>Result</h2>
+        <div class="divider"></div>
+        <p id="yourlovescoreis"></p>
+        <h1 id="score"></h1>
+        <p id="loveinfo">True love stories never have endings.</p>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDyW1R5CMjAtPypckujFFl4bSO7jLW3huQ",
+        authDomain: "lovecalculator-80604.firebaseapp.com",
+        databaseURL: "https://lovecalculator-80604-default-rtdb.firebaseio.com",
+        projectId: "lovecalculator-80604",
+        storageBucket: "lovecalculator-80604.appspot.com",
+        messagingSenderId: "24122400571",
+        appId: "1:24122400571:web:037a9d5f2550aa2d01a11e",
+        measurementId: "G-B16NWZTDHJ",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      var messagesRef = firebase.database().ref("Collected Data");
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", submitForm);
+
+      function submitForm(e) {}
+
+      // Function to get form values
+      function getInputVal(id) {
+        return document.getElementById(id).value;
+      }
+
+      // Save message to firebase
+      function saveMessage(yourname, theirname) {
+        var newMessageRef = messagesRef.push();
+        newMessageRef.set({
+          yourname: yourname,
+          theirname: theirname,
+        });
+      }
+    </script>
+  </body>
+</html>
