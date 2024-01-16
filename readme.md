@@ -38,4 +38,4 @@ Add some screenshots or GIFs showcasing your love calculator in action.
 
 - [Saisudeep](https://github.com/Saisudeep121521)
 
-Feel free to explore the code, contribute, and spread the love! 💑🌟
+Feel free to explore the code, contribute, and spread the love..! 💑🌟
