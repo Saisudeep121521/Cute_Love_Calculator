@@ -1,6 +1,6 @@
 # Cute Love Calculator
 
-![Love Calculator](https://iphoneswallpapers.com/wp-content/uploads/2023/02/Floral-Heart-iPhone-Wallpaper-HD.jpg)
+![Love Calculator](💖)
 
 ## About
 
